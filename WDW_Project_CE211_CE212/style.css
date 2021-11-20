@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url('background.png');  
+  background-image: url("background.png");
 }
 
 ::selection {
@@ -16,7 +16,22 @@ body {
   background: #007bff;
 }
 
-.start_btn{
+.start_btn .nameOfUser{
+  text-align: left;
+  height: 50px;
+  width: 300px;
+  border: solid rgba(111, 0, 255, 0.7) 2px;
+  box-shadow: rgba(195, 0, 255, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  padding: 10px;
+  outline-style: none;
+  font-size: 22px;
+  background-color: transparent;
+}
+
+.start_btn {
+  padding: 35px;
+  text-align: center;
   background-color: transparent;
   outline: none;
   position: absolute;
@@ -130,7 +145,7 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
-  
+
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
@@ -147,7 +162,7 @@ body {
   /* background: #fff; */
   border-radius: 5px 5px 0 0;
   display: flex;
-  align-items: center;  
+  align-items: center;
   justify-content: space-between;
   box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
 
@@ -157,7 +172,6 @@ body {
   -webkit-backdrop-filter: blur(4px);
   /* border-radius: 10px; */
   border: 1px solid rgba(255, 255, 255, 0.18);
-  
 }
 
 .quiz_box header .title {
@@ -342,4 +356,85 @@ footer button.show {
   transform: scale(1);
 }
 
+.result_box {
+  /* background: #fff; */
+  /* border-radius: 5px; */
+  display: flex;
+  padding: 25px 30px;
+  width: 450px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
 
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.result_box .icon {
+  font-size: 100px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.result_box .complete_text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.result_box .score_text span {
+  display: flex;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.result_box .score_text span p {
+  padding: 0 4px;
+  font-weight: 600;
+}
+
+.result_box .buttons {
+  display: flex;
+  margin: 20px 0;
+}
+
+.result_box .buttons button {
+  margin: 0 10px;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #007bff;
+  transition: all 0.3s ease;
+}
+
+.buttons button.restart {
+  color: #fff;
+  background: #007bff;
+}
+
+.buttons button.restart:hover {
+  background: #0263ca;
+}
+
+.buttons button.quit {
+  color: #007bff;
+  background: #fff;
+}
+
+.buttons button.quit:hover {
+  color: #fff;
+  background: #007bff;
+}
